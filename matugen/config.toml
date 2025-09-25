@@ -1,0 +1,50 @@
+[config]
+
+[config.wallpaper]
+command="hyprctl hyprpaper"
+arguments=["reload"]
+set=true
+
+[templates.hyprland]
+input_path='~/.config/matugen/hColors.conf'
+output_path='~/.config/hypr/colors.conf'
+post_hook='hyprctl reload'
+
+[templates.kitty]
+input_path='~/.config/matugen/kColors.conf'
+output_path='~/.config/kitty/themes/colors.conf'
+post_hook='kitty +kitten themes --reload-in=all colors'
+
+[templates.wofi]
+input_path='~/.config/matugen/wColors.css'
+output_path='~/.config/wofi/theme.css'
+
+[templates.vesktop]
+input_path='~/.config/matugen/dColors.css'
+output_path='~/.config/Vencord/themes/colors.css'
+
+[templates.pywalfox]
+input_path='~/.config/matugen/zColors.json'
+output_path='~/.cache/wal/colors.json'
+post_hook='pywalfox update'
+
+[templates.fastfetch]
+input_path='~/.config/matugen/fColors.jsonc'
+output_path='~/.config/fastfetch/config.jsonc'
+
+[templates.btop]
+input_path='~/.config/matugen/bColors.theme'
+output_path='~/.config/btop/themes/colors.theme'
+
+[templates.gtk3]
+input_path='~/.config/matugen/gColors.css'
+output_path='~/.config/gtk-3.0/colors.css'
+post_hook='gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path='~/.config/matugen/gColors.css'
+output_path='~/.config/gtk-4.0/colors.css'
+
+[templates.text]
+input_path='~/.config/matugen/colors.txt'
+output_path='~/.config/matugen/outColors.txt'
